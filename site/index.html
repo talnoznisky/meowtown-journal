@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="apple-touch-icon" sizes="180x180" href="/graphics/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/graphics/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/graphics/favicons/favicon-16x16.png">
+<link rel="manifest" href="/graphics/favicons/site.webmanifest">
+<link rel="mask-icon" href="/graphics/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<title>Is this Norah Jones?</title>
+<style>
+    .dropbtn {
+        background-color: transparent;
+        border: transparent; 
+        font-size: large;
+        padding: 0;
+        cursor: pointer;
+    }
+    .dropdown {
+        position: relative;
+        /* display: inline-block; */
+        top:0;
+        float: right;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        border: 1px solid black;
+        z-index: 1;
+        right:0;
+    }
+
+    .dropdown-content a {
+        color:blue;
+        background-color: white;
+        padding: 1em;
+        display: block;
+    }
+    .show {display:block;}
+
+    .container{
+        position: relative;
+        text-align: center;
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .header {
+        position: relative;
+        padding: 1em;
+    }
+
+    .pages {
+        position: relative;
+    }
+     #email > img {
+         width: 20%;
+         margin: 2px;
+     }
+
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+        .container {
+            width: 100%;
+        }
+        .dropdown {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            right: 0;
+        }
+        #email > img {
+            width: 40%;
+            margin: 2px;
+        }
+    }    
+</style>
+</head>
+<body>
+<div class='container'>
+    <div class='header'>
+        <div class="dropdown">
+            <button onclick="dd()" class="dropbtn">ℹ️</button>
+            <div class="dropdown-content">
+                <a id="repo" href='https://github.com/talnoznisky/meowtown-journal'>https://github.com/talnoznisky/meowtown-journal</a>
+            </div>
+        </div> 
+    </div>
+    <div class='pages'>
+        <row>
+            <img src='../pages/cover.png'>
+            <img src='../pages/figure1.png'>
+        </row>
+        <br>
+        <row>
+            <img src='../pages/figure2.png'>
+            <img src='../pages/figure3.png'>
+        </row>
+        <br>
+        <row>
+            <img src='../pages/figure4.png'>
+            <img src='../pages/figure5.png'>
+        </row>
+        <br>
+        <row>
+            <img src='../pages/figure6.png'>
+            <img src='../pages/backcover.png'>
+        </row>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <div id='email'>
+                <img src='../pages/email.png'>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+</body>
+<script>
+// dropdown functionality. Thanks w3 schools!
+function dd() {
+    document.getElementsByClassName("dropdown-content")[0].classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+            }
+        }
+    }
+}
+</script>
+</html>

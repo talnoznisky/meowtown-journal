@@ -1,3 +1,4 @@
 xcf/*
 *.pdf
 .DS_Store
+/vols

@@ -30,7 +30,11 @@ function buildMenu() {
 
     // 3. GitHub repo link    
     menu.innerHTML = html;
-}
+
+    // 4. Email me
+    menu.innerHTML += `<hr><p>Contact the journal:</p><a href="mailto:tal.noznisky@gmail.com">tal.noznisky@gmail.com</a>`;
+}   
+
 
 document.addEventListener("DOMContentLoaded", buildMenu);
 

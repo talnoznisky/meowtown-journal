@@ -1,21 +1,45 @@
+.dropbtn {
+    background-color: transparent;
+    border: transparent; 
+    font-size: large;
+    padding: 0;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    right: 0;
+}
+
 .dropdown-content {
     display: none;
     text-align: left;
     position: absolute;
     background-color: white;
     border: 1px solid black;
-    z-index: 1;
+    z-index: 10;
     right: 0;
-    width: 180px; /* Gives the dropdown a clean, fixed width on all screens */
+    top: 100%; /* Opens directly beneath the button */
+    width: 200px;
     box-sizing: border-box;
 }
 
-.dropdown-content a, .dropdown-content p {
+.dropdown-content a, 
+.dropdown-content p {
     background-color: white;
     margin: 0;
     padding: 0.8em 1em;
     display: block;
-    word-wrap: break-word; /* Prevents long URLs or titles from breaking layout */
+    word-wrap: break-word;
+    font-size: 14px;
+    text-decoration: none;
+    color: #0000ee;
+}
+
+.dropdown-content p {
+    color: black;
 }
 
 .dropdown-content hr {
@@ -24,9 +48,11 @@
     border-top: 1px solid black;
 }
 
-.show {display:block;}
+.show {
+    display: block;
+}
 
-.container{
+.container {
     position: relative;
     text-align: center;
     width: 65%;
@@ -36,14 +62,14 @@
 
 .header {
     position: relative;
-    padding: 1em;
+    padding: 1em 0;
+    height: 40px; /* Gives the absolute dropdown space to anchor to */
 }
 
 .pages {
     position: relative;
 }
 
-/* Make sure images scale down nicely and don't overflow on small phone screens */
 .pages img {
     max-width: 100%;
     height: auto;
@@ -57,14 +83,15 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .container {
         width: 100%;
-        padding: 0 10px; /* Adds a tiny bit of breathing room on mobile edges */
+        padding: 0 10px;
     }
+    
     .dropdown {
         position: absolute;
-        display: inline-block;
         top: 0;
         right: 0;
     }
+
     #email > img {
         width: 40%;
         margin: 2px;
